@@ -1,0 +1,76 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+%
+% MASTER CV — Marko Hrenić
+% Generic version. Per-application variants are derived from this file.
+% See ../cv-workflow.md for how variants work.
+%
+% Template: Awesome-CV (https://github.com/posquit0/Awesome-CV), CC BY-SA 4.0
+%
+% COMPILE: XeLaTeX (not pdfLaTeX — the font loading requires Xe).
+%          On Overleaf: Menu > Compiler > XeLaTeX.
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+\documentclass[11pt, a4paper]{awesome-cv}
+
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+\fontdir[fonts/]
+
+% awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+% awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-darknight}
+
+\setbool{acvSectionColorHighlight}{true}
+
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%-------------------------------------------------------------------------------
+\name{Marko}{Hrenić}
+\position{Software Engineering Student{\enskip\cdotp\enskip}Competitive Mathematician}
+\address{Novi Marof, Croatia}
+
+\mobile{(+385) 99-385-0693}
+\email{marko.hrenic4@gmail.com}
+\github{mhrenicc}
+\linkedin{Marko Hrenić}
+% TODO: once the LinkedIn vanity URL is set, put the exact slug above.
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+\makecvheader[C]
+
+\makecvfooter
+  {\today}
+  {Marko Hrenić~~~·~~~Résumé}
+  {\thepage}
+
+
+%-------------------------------------------------------------------------------
+%	CONTENT
+%
+%	Section order is a deliberate choice and IS a per-variant lever:
+%	  - SWE / general  : Experience before Honors (industry work is the rarer signal)
+%	  - Quant / trading: Honors before Experience (olympiad record is the screening filter)
+%-------------------------------------------------------------------------------
+\input{master/summary.tex}
+\input{master/education.tex}
+\input{master/experience.tex}
+\input{master/honors.tex}
+\input{master/skills.tex}
+\input{master/extracurricular.tex}
+
+% Held back from the master build until there is a project Marko can fully defend
+% in an interview. See master/projects.tex for the reasoning.
+% \input{master/projects.tex}
+
+
+%-------------------------------------------------------------------------------
+\end{document}
